@@ -1,21 +1,11 @@
 
-
 <!DOCTYPE html>
 <html lang='en'>
 
 <head>
-            
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62667723-1"></script>          
-    <script>        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-62667723-1'); 
-    </script>
-    <meta name="google-site-verification" content="2oJKLqNN62z6AOCb0A0IXGtbQuj-lev5YPAHFF_cbHQ"/>
-
+    
         <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta name='viewport' content='width=device-width, initial-scale=1,shrink-to-fit=no'>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel='shortcut icon' href='/theme/favicon.ico' type='image/x-icon'>
         <title>Matrix - Enterprise | MITRE ATT&CK&reg;</title>
@@ -23,15 +13,20 @@
         <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
         <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
         <link rel='stylesheet' href='/theme/style/bootstrap-tourist.css' />
-        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?426cc53a">
+        <link rel='stylesheet' href='/theme/style/bootstrap-select.min.css' />
+        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?774bd4a3">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-<!--stopindex-->
-    <header>
+
+    <div class="container-fluid attack-website-wrapper d-flex flex-column h-100">
+        <div class="row sticky-top flex-grow-0 flex-shrink-1">
+            <!-- header elements -->
+            <header class="col px-0">
     
-            <nav class='navbar navbar-expand-lg navbar-dark fixed-top'>
+                    <nav class='navbar navbar-expand-lg navbar-dark position-static'>
         <a class='navbar-brand' href='/'><img src="/theme/images/mitre_attack_logo.png" class="attack-logo"></a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse'
                 aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
@@ -39,8 +34,19 @@
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
             <ul class='nav nav-tabs ml-auto'>
-                        <li class="nav-item">
-                            <a href="/matrices/"  class="nav-link" ><b>Matrices</b></a>
+                        <li class="nav-item dropdown">
+                                
+    <a class="nav-link dropdown-toggle" href="/matrices/" id="navbarDropdown" role="button"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Matrices</b>
+    </a>
+    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/matrices/enterprise/">Enterprise</a>
+                <a class="dropdown-item" href="/matrices/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/matrices/ics/">ICS</a>
+    </div>
+
+
                         </li>
                         <li class="nav-item dropdown">
                                 
@@ -51,6 +57,7 @@
     <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/tactics/enterprise/">Enterprise</a>
                 <a class="dropdown-item" href="/tactics/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/tactics/ics/">ICS</a>
     </div>
 
 
@@ -64,9 +71,13 @@
     <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/techniques/enterprise/">Enterprise</a>
                 <a class="dropdown-item" href="/techniques/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/techniques/ics/">ICS</a>
     </div>
 
 
+                        </li>
+                        <li class="nav-item">
+                            <a href="/datasources"  class="nav-link" ><b>Data Sources</b></a>
                         </li>
                         <li class="nav-item dropdown">
                                 
@@ -77,6 +88,7 @@
     <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/mitigations/enterprise/">Enterprise</a>
                 <a class="dropdown-item" href="/mitigations/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/mitigations/ics/">ICS</a>
     </div>
 
 
@@ -86,6 +98,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="/software/"  class="nav-link" ><b>Software</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/campaigns"  class="nav-link" ><b>Campaigns</b></a>
                         </li>
                         <li class="nav-item dropdown">
                                 
@@ -103,6 +118,7 @@
                 <a class="dropdown-item" href="/resources/updates/">Updates</a>
                 <a class="dropdown-item" href="/resources/versions/">Versions of ATT&CK</a>
                 <a class="dropdown-item" href="/resources/related-projects/">Related Projects</a>
+                <a class="dropdown-item" href="/resources/brand/">Brand Guide</a>
     </div>
 
 
@@ -118,216 +134,197 @@
                             <a href="/resources/contribute/"  class="nav-link" ><b>Contribute</b></a>
                         </li>
                         <li class="nav-item">
-                            <button id="search-button" class="btn search-button">Search <div class="search-icon"></div></button>
+                            <button id="search-button" class="btn search-button">Search <div id="search-icon" class="icon-button search-icon"></div></button>
                         </li>
             </ul>
         </div>
     </nav>
 
-    </header>
-    <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the versioning feature -->
-    <!-- !versions banner! -->
+            </header>
+        </div>
+        <div class="row flex-grow-0 flex-shrink-1">
+            <!-- banner elements -->
+            <div class="col px-0">
+                <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the versioning feature -->
+                <!-- !versions banner! -->
+                    <div class="container-fluid banner-message">
+                        ATT&CKcon 4.0 will be held on Oct 24-25 in McLean, VA. <a href='https://na.eventscloud.com/attackcon4/'>Click here</a> for more details and to register.
+                    </div>
+            </div>
+        </div>
+        <div class="row flex-grow-1 flex-shrink-0">
+            <!-- main content elements -->
+            <!--start-indexing-for-search-->
 
-<div id='content' class="maincontent">
-    <!--start-indexing-for-search-->
-    <div class='container-fluid h-100'>
-        <div class='row h-100'>
  
-             
-            <div class="nav flex-column col-xl-2 col-lg-3 col-md-3  sidebar nav pt-5 pb-3 pl-3 border-right" id="v-tab" role="tablist" aria-orientation="vertical">
+     
+    <div class="sidebar nav sticky-top flex-column pr-0 pt-4 pb-3 pl-3" id="v-tab" role="tablist" aria-orientation="vertical">
+        <div class="resizer"></div>
 <!--stop-indexing-for-search-->
-    <span class="heading" id="v-home-tab" aria-selected="false">MATRICES</span>
-
-
-    
-
+    <div class="sidenav-wrapper">
+  <div class="heading" data-toggle="collapse" data-target="#sidebar-collapse" id="v-home-tab" aria-selected="false">MATRICES
+    <i class="fa fa-fw fa-chevron-down"></i>
+    <i class="fa fa-fw fa-chevron-up"></i>
+  </div>
+  <br class="br-mobile">
+  <div class="collapse show" id="sidebar-collapse">
+  <div class="sidenav-list">
 <div class="sidenav">
-        <div class="sidenav-head " id="enterprise">
-                <a href="/matrices/enterprise/">
-                    Enterprise
-                </a>
-            <div class="expand-button collapsed" id="enterprise-header" data-toggle="collapse" data-target="#enterprise-body" aria-expanded="false" aria-controls="#enterprise-body"></div>
-
-        </div>
-        <div class="sidenav-body collapse" id="enterprise-body" aria-labelledby="enterprise-header">
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head active" id="enterprise-pre">
-                <a href="/matrices/enterprise/pre/">
-                    PRE
-                </a>
-            </div>
+  <div class="sidenav-head  " id="enterprise">
+      <a href="/matrices/enterprise/">
+        Enterprise
+      </a>
+    <div class="expand-button collapsed" id="enterprise-header" data-toggle="collapse" data-target="#enterprise-body" aria-expanded="false" aria-controls="#enterprise-body"></div>
+  </div>
+  <div class="sidenav-body collapse" id="enterprise-body" aria-labelledby="enterprise-header">
+        <div class="sidenav">
+    <div class="sidenav-head  active " id="enterprise-pre">
+      <a href="/matrices/enterprise/pre/">
+        PRE
+      </a>
+    </div>
 </div>
 
-                    
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-windows">
+      <a href="/matrices/enterprise/windows/">
+        Windows
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-macos">
+      <a href="/matrices/enterprise/macos/">
+        macOS
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-linux">
+      <a href="/matrices/enterprise/linux/">
+        Linux
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+  <div class="sidenav-head  " id="enterprise-cloud">
+      <a href="/matrices/enterprise/cloud/">
+        Cloud
+      </a>
+    <div class="expand-button collapsed" id="enterprise-cloud-header" data-toggle="collapse" data-target="#enterprise-cloud-body" aria-expanded="false" aria-controls="#enterprise-cloud-body"></div>
+  </div>
+  <div class="sidenav-body collapse" id="enterprise-cloud-body" aria-labelledby="enterprise-cloud-header">
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-cloud-office">
+      <a href="/matrices/enterprise/cloud/office365/">
+        Office 365
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-cloud-azure">
+      <a href="/matrices/enterprise/cloud/azuread/">
+        Azure AD
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-cloud-google">
+      <a href="/matrices/enterprise/cloud/googleworkspace/">
+        Google Workspace
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-cloud-saas">
+      <a href="/matrices/enterprise/cloud/saas/">
+        SaaS
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-cloud-iaas">
+      <a href="/matrices/enterprise/cloud/iaas/">
+        IaaS
+      </a>
+    </div>
+</div>
+
+  </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-network">
+      <a href="/matrices/enterprise/network/">
+        Network
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-containers">
+      <a href="/matrices/enterprise/containers/">
+        Containers
+      </a>
+    </div>
+</div>
+
+  </div>
+</div>
 
 <div class="sidenav">
-            <div class="sidenav-head" id="enterprise-windows">
-                <a href="/matrices/enterprise/windows/">
-                    Windows
-                </a>
-            </div>
+  <div class="sidenav-head  " id="mobile">
+      <a href="/matrices/mobile/">
+        Mobile
+      </a>
+    <div class="expand-button collapsed" id="mobile-header" data-toggle="collapse" data-target="#mobile-body" aria-expanded="false" aria-controls="#mobile-body"></div>
+  </div>
+  <div class="sidenav-body collapse" id="mobile-body" aria-labelledby="mobile-header">
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-android">
+      <a href="/matrices/mobile/android/">
+        Android
+      </a>
+    </div>
 </div>
 
-                    
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-ios">
+      <a href="/matrices/mobile/ios/">
+        iOS
+      </a>
+    </div>
+</div>
+
+  </div>
+</div>
 
 <div class="sidenav">
-            <div class="sidenav-head" id="enterprise-macos">
-                <a href="/matrices/enterprise/macos/">
-                    macOS
-                </a>
-            </div>
+    <div class="sidenav-head  " id="ics-ics">
+      <a href="/matrices/ics/">
+        ICS
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-linux">
-                <a href="/matrices/enterprise/linux/">
-                    Linux
-                </a>
-            </div>
+  </div>
 </div>
-
-                    
-
-<div class="sidenav">
-        <div class="sidenav-head " id="enterprise-cloud">
-                <a href="/matrices/enterprise/cloud/">
-                    Cloud
-                </a>
-            <div class="expand-button collapsed" id="enterprise-cloud-header" data-toggle="collapse" data-target="#enterprise-cloud-body" aria-expanded="false" aria-controls="#enterprise-cloud-body"></div>
-
-        </div>
-        <div class="sidenav-body collapse" id="enterprise-cloud-body" aria-labelledby="enterprise-cloud-header">
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-cloud-office">
-                <a href="/matrices/enterprise/cloud/office365/">
-                    Office 365
-                </a>
-            </div>
 </div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-cloud-azure">
-                <a href="/matrices/enterprise/cloud/azuread/">
-                    Azure AD
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-cloud-google">
-                <a href="/matrices/enterprise/cloud/googleworkspace/">
-                    Google Workspace
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-cloud-saas">
-                <a href="/matrices/enterprise/cloud/saas/">
-                    SaaS
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-cloud-iaas">
-                <a href="/matrices/enterprise/cloud/iaas/">
-                    IaaS
-                </a>
-            </div>
-</div>
-
-        </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-network">
-                <a href="/matrices/enterprise/network/">
-                    Network
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-containers">
-                <a href="/matrices/enterprise/containers/">
-                    Containers
-                </a>
-            </div>
-</div>
-
-        </div>
-</div>
-
-    
-
-<div class="sidenav">
-        <div class="sidenav-head " id="mobile">
-                <a href="/matrices/mobile/">
-                    Mobile
-                </a>
-            <div class="expand-button collapsed" id="mobile-header" data-toggle="collapse" data-target="#mobile-body" aria-expanded="false" aria-controls="#mobile-body"></div>
-
-        </div>
-        <div class="sidenav-body collapse" id="mobile-body" aria-labelledby="mobile-header">
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-android">
-                <a href="/matrices/mobile/android/">
-                    Android
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-ios">
-                <a href="/matrices/mobile/ios/">
-                    iOS
-                </a>
-            </div>
-</div>
-
-        </div>
-</div>
-
-    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="ics-ics">
-                <a href="https://collaborate.mitre.org/attackics" target="_blank">
-                    ICS
-                        <img src="/theme/images/external-site-dark.jpeg" width="15">
-                </a>
-            </div>
-</div>
-
   
 <!--start-indexing-for-search-->
-            </div>
-             
-            <div class="tab-content col-xl-10 col-lg-9 col-md-9 pt-4" id="v-tabContent">
-                <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
+    </div>
+
+    
+     
+    <div class="tab-content col-xl-9 col-lg-9 col-md-8 pt-4" id="v-tabContent">
+        <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
     <div class="row">
         <div class="col-md-9">
             <ol class="breadcrumb">
@@ -362,13 +359,13 @@
         <a data-toggle="tooltip" 
            data-placement="bottom" 
            title="Permalink to this version of the matrix" 
-           href="/versions/v9/matrices/enterprise/pre/" data-test-ignore="true">Version Permalink</a>
+           href="/versions/v13/matrices/enterprise/pre/" data-test-ignore="true">Version Permalink</a>
     </div>
     <div class="permalink">
         <a data-toggle="tooltip" 
            data-placement="bottom" 
            title="Go to the live version of the matrix" 
-           href="/versions/v9/matrices/enterprise/pre/" data-test-ignore="true">Live Version</a><!--do not change this line without also changing versions.py-->
+           href="/versions/v13/matrices/enterprise/pre/" data-test-ignore="true">Live Version</a><!--do not change this line without also changing versions.py-->
     </div>
 </div>
 
@@ -385,18 +382,18 @@
                 <div class="btn-group" role="group">
                     <button class="btn btn-default dropdown-toggle" id="layout-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected_layout="side">layout: side</button>
                     <div class="dropdown-menu" aria-labelledby="layout-options">
-                        <a class="dropdown-item layout-button side active" href="#" onclick="show_side_matrix()">
+                        <a class="dropdown-item layout-button side active" href="#" onclick="showSideMatrix()">
                             side
                         </a>
-                        <a class="dropdown-item layout-button flat" href="#" onclick="show_flat_matrix();  tour_layout_clicked()  ">
+                        <a class="dropdown-item layout-button flat" href="#" onclick="showFlatMatrix();  tour_layout_clicked()  ">
                             flat
                         </a>
                 </div>
                 </div>
             </div>
             <div class="btn-group mr-2" role="group">
-                <button type="button" class="btn btn-default" onclick="matrix_toggle_all(true)">show sub-techniques</button>
-                <button type="button" class="btn btn-default" onclick="matrix_toggle_all(false)">hide sub-techniques</button>
+                <button type="button" class="btn btn-default" onclick="toggleAllMatrixSubTechniques(true)">show sub-techniques</button>
+                <button type="button" class="btn btn-default" onclick="toggleAllMatrixSubTechniques(false)">hide sub-techniques</button>
             </div>
             <!-- no help button on index page -->
             <div class="btn-group" role="group">
@@ -423,7 +420,7 @@
                     10&nbsp;techniques
                 </td>
                 <td class="tactic count">
-                    7&nbsp;techniques
+                    8&nbsp;techniques
                 </td>
         </tr>
     </thead>
@@ -440,14 +437,14 @@
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b">
-    <a href="/techniques/T1595" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" title="T1595">Active Scanning&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1595" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" title="T1595">Active Scanning&nbsp;<sub>(3)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -476,6 +473,13 @@
 </div>
 
                                         </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--bed04f7d-e48a-4e76-bd0f-4c57fe31fc46">
+    <a href="/techniques/T1595/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--bed04f7d-e48a-4e76-bd0f-4c57fe31fc46" title="T1595.003">Wordlist Scanning</a>
+</div>
+
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -495,7 +499,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f sidebar--tour" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f'); tour_technique_clicked();">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f sidebar--tour" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f'); tour_technique_clicked();">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -557,7 +561,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -612,7 +616,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -688,7 +692,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -705,15 +709,15 @@
                                     <div class="subtechniques hidden subtechniques-container subtechniques--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23">
                                         <div class="subtechnique">
                                             
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f">
-    <a href="/techniques/T1591/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f" title="T1591.002">Business Relationships</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867">
+    <a href="/techniques/T1591/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867" title="T1591.001">Determine Physical Locations</a>
 </div>
 
                                         </div>
                                         <div class="subtechnique">
                                             
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867">
-    <a href="/techniques/T1591/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867" title="T1591.001">Determine Physical Locations</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f">
+    <a href="/techniques/T1591/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f" title="T1591.002">Business Relationships</a>
 </div>
 
                                         </div>
@@ -750,7 +754,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -805,7 +809,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -853,7 +857,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -870,15 +874,15 @@
                                     <div class="subtechniques hidden subtechniques-container subtechniques--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0">
                                         <div class="subtechnique">
                                             
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f">
-    <a href="/techniques/T1596/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f" title="T1596.002">WHOIS</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532">
+    <a href="/techniques/T1596/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532" title="T1596.001">DNS/Passive DNS</a>
 </div>
 
                                         </div>
                                         <div class="subtechnique">
                                             
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532">
-    <a href="/techniques/T1596/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532" title="T1596.001">DNS/Passive DNS</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f">
+    <a href="/techniques/T1596/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f" title="T1596.002">WHOIS</a>
 </div>
 
                                         </div>
@@ -915,14 +919,14 @@
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365">
-    <a href="/techniques/T1593" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" title="T1593">Search Open Websites/Domains&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1593" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" title="T1593">Search Open Websites/Domains&nbsp;<sub>(3)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365');">
+                                <td class="sidebar sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -948,6 +952,13 @@
                                             
 <div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6e561441-8431-4773-a9b8-ccf28ef6a968">
     <a href="/techniques/T1593/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6e561441-8431-4773-a9b8-ccf28ef6a968" title="T1593.002">Search Engines</a>
+</div>
+
+                                        </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--70910fbd-58dc-4c1c-8c48-814d11fcd022">
+    <a href="/techniques/T1593/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--70910fbd-58dc-4c1c-8c48-814d11fcd022" title="T1593.003">Code Repositories</a>
 </div>
 
                                         </div>
@@ -977,19 +988,34 @@
 
                             <tr class="technique-row" >
                                 <td>
+                                        
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--d21bb61f-08ad-4dc1-b001-81ca6cb79954">
+    <a href="/techniques/T1650" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--d21bb61f-08ad-4dc1-b001-81ca6cb79954" title="T1650">Acquire Access</a>
+</div>
+
+                                </td>
+                                <td class="subtechniques-td">
+                                    <div class="subtechniques hidden subtechniques-container subtechniques--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--d21bb61f-08ad-4dc1-b001-81ca6cb79954">
+                                    </div>
+                                </td>
+                            </tr>
+                        <!-- tour technique is scheduled task under privilege escalation -->
+
+                            <tr class="technique-row" >
+                                <td>
                                     <table class="supertechnique">
                                         <tr>
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2">
-    <a href="/techniques/T1583" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" title="T1583">Acquire Infrastructure&nbsp;<sub>(6)</sub></a>
+    <a href="/techniques/T1583" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" title="T1583">Acquire Infrastructure&nbsp;<sub>(8)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1046,6 +1072,20 @@
 </div>
 
                                         </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--04a5a8ab-3bc8-4c83-95c9-55274a89786d">
+    <a href="/techniques/T1583/007" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--04a5a8ab-3bc8-4c83-95c9-55274a89786d" title="T1583.007">Serverless</a>
+</div>
+
+                                        </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--155207c0-7f53-4f13-a06b-0a9907ef5096">
+    <a href="/techniques/T1583/008" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--155207c0-7f53-4f13-a06b-0a9907ef5096" title="T1583.008">Malvertising</a>
+</div>
+
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -1058,14 +1098,14 @@
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a">
-    <a href="/techniques/T1586" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" title="T1586">Compromise Accounts&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1586" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" title="T1586">Compromise Accounts&nbsp;<sub>(3)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1094,6 +1134,13 @@
 </div>
 
                                         </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--3d52e51e-f6db-4719-813c-48002a99f43a">
+    <a href="/techniques/T1586/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--3d52e51e-f6db-4719-813c-48002a99f43a" title="T1586.003">Cloud Accounts</a>
+</div>
+
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -1106,14 +1153,14 @@
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9">
-    <a href="/techniques/T1584" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" title="T1584">Compromise Infrastructure&nbsp;<sub>(6)</sub></a>
+    <a href="/techniques/T1584" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" title="T1584">Compromise Infrastructure&nbsp;<sub>(7)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1170,6 +1217,13 @@
 </div>
 
                                         </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--df1bc34d-1634-4c93-b89e-8120994fce77">
+    <a href="/techniques/T1584/007" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--df1bc34d-1634-4c93-b89e-8120994fce77" title="T1584.007">Serverless</a>
+</div>
+
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -1189,7 +1243,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1244,14 +1298,14 @@
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8">
-    <a href="/techniques/T1585" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" title="T1585">Establish Accounts&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1585" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" title="T1585">Establish Accounts&nbsp;<sub>(3)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1280,6 +1334,13 @@
 </div>
 
                                         </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5">
+    <a href="/techniques/T1585/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5" title="T1585.003">Cloud Accounts</a>
+</div>
+
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -1299,7 +1360,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1368,14 +1429,14 @@
                                             <td class="technique">
                                                 
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0">
-    <a href="/techniques/T1608" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" title="T1608">Stage Capabilities&nbsp;<sub>(5)</sub></a>
+    <a href="/techniques/T1608" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" title="T1608">Stage Capabilities&nbsp;<sub>(6)</sub></a>
 </div>
 
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0');">
+                                <td class="sidebar sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0');">
                                     <div class="angle top">
                                         <svg width="12px" height="12px">
                                             <path d="M0 12H12V0Z"/>
@@ -1425,6 +1486,13 @@
 </div>
 
                                         </div>
+                                        <div class="subtechnique">
+                                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--e5d550f3-2202-4634-85f2-4a200a1d49b3">
+    <a href="/techniques/T1608/006" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--e5d550f3-2202-4634-85f2-4a200a1d49b3" title="T1608.006">SEO Poisoning</a>
+</div>
+
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -1439,7 +1507,10 @@
             <div class="cover"></div>
         </div>
     </div>
-    <div class="timestamp deemphasis text-center pt-3">Last modified: 29 April 2021</div>
+    <!-- TODO: Re-enable this once we figure out how to show the last modified timestamp of the
+               latest domain release, not the Matrix object itself
+    <div class="timestamp deemphasis text-center pt-3">Last modified: 01 April 2022</div>
+    -->
 </div>
  
         </div>
@@ -1461,7 +1532,7 @@
                     10&nbsp;techniques
                 </td>
                 <td class="tactic count">
-                    7&nbsp;techniques
+                    8&nbsp;techniques
                 </td>
         </tr>
     </thead>
@@ -1472,13 +1543,13 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b">
-    <a href="/techniques/T1595" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" title="T1595">Active Scanning&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1595" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b" title="T1595">Active Scanning&nbsp;<sub>(3)</sub></a>
 </div>
 
                                     </td>
@@ -1501,6 +1572,11 @@
     <a href="/techniques/T1595/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--5502c4e9-24ef-4d5f-8ee9-9e906c2f82c4" title="T1595.002">Vulnerability Scanning</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--bed04f7d-e48a-4e76-bd0f-4c57fe31fc46">
+    <a href="/techniques/T1595/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--bed04f7d-e48a-4e76-bd0f-4c57fe31fc46" title="T1595.003">Wordlist Scanning</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -1509,7 +1585,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique" id="tour-flat-technique" >
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f sidebar--tour" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f'); tour_technique_clicked();">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f sidebar--tour" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f'); tour_technique_clicked();">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1556,7 +1632,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1598,7 +1674,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1655,7 +1731,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1675,13 +1751,13 @@
                                     <td class="subtechniques">
                                         <div class="subtechniques">
                                                 
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f">
-    <a href="/techniques/T1591/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f" title="T1591.002">Business Relationships</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867">
+    <a href="/techniques/T1591/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867" title="T1591.001">Determine Physical Locations</a>
 </div>
 
                                                 
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867">
-    <a href="/techniques/T1591/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867" title="T1591.001">Determine Physical Locations</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f">
+    <a href="/techniques/T1591/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f" title="T1591.002">Business Relationships</a>
 </div>
 
                                                 
@@ -1702,7 +1778,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1744,7 +1820,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1781,7 +1857,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -1801,13 +1877,13 @@
                                     <td class="subtechniques">
                                         <div class="subtechniques">
                                                 
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f">
-    <a href="/techniques/T1596/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f" title="T1596.002">WHOIS</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532">
+    <a href="/techniques/T1596/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532" title="T1596.001">DNS/Passive DNS</a>
 </div>
 
                                                 
-<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532">
-    <a href="/techniques/T1596/001" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532" title="T1596.001">DNS/Passive DNS</a>
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f">
+    <a href="/techniques/T1596/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f" title="T1596.002">WHOIS</a>
 </div>
 
                                                 
@@ -1833,13 +1909,13 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" onclick="matrix_toggle_technique('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" onclick="toggleMatrixSubTechniques('x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592', 'attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365">
-    <a href="/techniques/T1593" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" title="T1593">Search Open Websites/Domains&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1593" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365" title="T1593">Search Open Websites/Domains&nbsp;<sub>(3)</sub></a>
 </div>
 
                                     </td>
@@ -1862,6 +1938,11 @@
     <a href="/techniques/T1593/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--6e561441-8431-4773-a9b8-ccf28ef6a968" title="T1593.002">Search Engines</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--70910fbd-58dc-4c1c-8c48-814d11fcd022">
+    <a href="/techniques/T1593/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592--attack-pattern--70910fbd-58dc-4c1c-8c48-814d11fcd022" title="T1593.003">Code Repositories</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -1875,16 +1956,22 @@
                 </td>
                 <td class="tactic">
                         
+                            
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--d21bb61f-08ad-4dc1-b001-81ca6cb79954">
+    <a href="/techniques/T1650" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--d21bb61f-08ad-4dc1-b001-81ca6cb79954" title="T1650">Acquire Access</a>
+</div>
+
+                        
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2">
-    <a href="/techniques/T1583" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" title="T1583">Acquire Infrastructure&nbsp;<sub>(6)</sub></a>
+    <a href="/techniques/T1583" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2" title="T1583">Acquire Infrastructure&nbsp;<sub>(8)</sub></a>
 </div>
 
                                     </td>
@@ -1927,6 +2014,16 @@
     <a href="/techniques/T1583/006" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--88d31120-5bc7-4ce3-a9c0-7cf147be8e54" title="T1583.006">Web Services</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--04a5a8ab-3bc8-4c83-95c9-55274a89786d">
+    <a href="/techniques/T1583/007" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--04a5a8ab-3bc8-4c83-95c9-55274a89786d" title="T1583.007">Serverless</a>
+</div>
+
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--155207c0-7f53-4f13-a06b-0a9907ef5096">
+    <a href="/techniques/T1583/008" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--155207c0-7f53-4f13-a06b-0a9907ef5096" title="T1583.008">Malvertising</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -1935,13 +2032,13 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a">
-    <a href="/techniques/T1586" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" title="T1586">Compromise Accounts&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1586" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a" title="T1586">Compromise Accounts&nbsp;<sub>(3)</sub></a>
 </div>
 
                                     </td>
@@ -1964,6 +2061,11 @@
     <a href="/techniques/T1586/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--3dc8c101-d4db-4f4d-8150-1b5a76ca5f1b" title="T1586.002">Email Accounts</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--3d52e51e-f6db-4719-813c-48002a99f43a">
+    <a href="/techniques/T1586/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--3d52e51e-f6db-4719-813c-48002a99f43a" title="T1586.003">Cloud Accounts</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -1972,13 +2074,13 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9">
-    <a href="/techniques/T1584" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" title="T1584">Compromise Infrastructure&nbsp;<sub>(6)</sub></a>
+    <a href="/techniques/T1584" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9" title="T1584">Compromise Infrastructure&nbsp;<sub>(7)</sub></a>
 </div>
 
                                     </td>
@@ -2021,6 +2123,11 @@
     <a href="/techniques/T1584/006" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--ae797531-3219-49a4-bccf-324ad7a4c7b2" title="T1584.006">Web Services</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--df1bc34d-1634-4c93-b89e-8120994fce77">
+    <a href="/techniques/T1584/007" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--df1bc34d-1634-4c93-b89e-8120994fce77" title="T1584.007">Serverless</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -2029,7 +2136,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -2076,13 +2183,13 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8">
-    <a href="/techniques/T1585" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" title="T1585">Establish Accounts&nbsp;<sub>(2)</sub></a>
+    <a href="/techniques/T1585" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8" title="T1585">Establish Accounts&nbsp;<sub>(3)</sub></a>
 </div>
 
                                     </td>
@@ -2105,6 +2212,11 @@
     <a href="/techniques/T1585/002" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--65013dd2-bc61-43e3-afb5-a14c4fa7437a" title="T1585.002">Email Accounts</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5">
+    <a href="/techniques/T1585/003" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5" title="T1585.003">Cloud Accounts</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -2113,7 +2225,7 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
@@ -2170,13 +2282,13 @@
                             <!-- tour technique is scheduled task under privilege escalation -->
                             <table class="supertechnique">
                                 <tr>
-                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" onclick="matrix_toggle_technique('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0');">
+                                    <td class="sidebar technique sidebar--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" onclick="toggleMatrixSubTechniques('x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400', 'attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0');">
                                         <div class="handle"> = </div>
                                     </td>
                                     <td class="technique">
                                         
 <div class="technique-cell  supertechniquecell"  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0">
-    <a href="/techniques/T1608" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" title="T1608">Stage Capabilities&nbsp;<sub>(5)</sub></a>
+    <a href="/techniques/T1608" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0" title="T1608">Stage Capabilities&nbsp;<sub>(6)</sub></a>
 </div>
 
                                     </td>
@@ -2214,6 +2326,11 @@
     <a href="/techniques/T1608/005" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--84ae8255-b4f4-4237-b5c5-e717405a9701" title="T1608.005">Link Target</a>
 </div>
 
+                                                
+<div class="technique-cell "  id="technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--e5d550f3-2202-4634-85f2-4a200a1d49b3">
+    <a href="/techniques/T1608/006" data-toggle="tooltip" data-placement="top" data-animation="false" data-container="#technique-cell--x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400--attack-pattern--e5d550f3-2202-4634-85f2-4a200a1d49b3" title="T1608.006">SEO Poisoning</a>
+</div>
+
                                         </div>
                                     </td>
                                 </tr>
@@ -2228,7 +2345,10 @@
             <div class="cover"></div>
         </div>
     </div>
-    <div class="timestamp deemphasis text-center pt-3">Last modified: 29 April 2021</div>
+    <!-- TODO: Re-enable this once we figure out how to show the last modified timestamp of the
+               latest domain release, not the Matrix object itself
+    <div class="timestamp deemphasis text-center pt-3">Last modified: 01 April 2022</div>
+    -->
 </div>
 
         </div>
@@ -2237,12 +2357,12 @@
 
             </div>
     </div>
-                </div>
-            </div>
-        </div>  
+        </div>
     </div>
-    <!--stop-indexing-for-search-->
-    <div class="overlay search" id="search-overlay" style="display: none;">
+
+            <!--stop-indexing-for-search-->
+            <!-- search overlay for entire page -- not displayed inline -->
+            <div class="overlay search" id="search-overlay" style="display: none;">
     <div class="overlay-inner">
         <!-- text input for searching -->
         <div class="search-header">
@@ -2266,74 +2386,82 @@
     </div>
 </div>
 
-</div>
-<footer class="footer p-3">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 col-sm-4 col-md-3">  
-                <div class="footer-center-responsive my-auto">
-                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
-                        <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 col-sm-2 footer-responsive-break"></div>
-            <div class="col-6 col-sm-6 text-center">  
-                <p>
-                     © 2015-2021, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.
-                </p>
-                <div class="row">
+        </div>
+        <div class="row flex-grow-0 flex-shrink-1">
+            <!-- footer elements -->
+            <footer class="col footer p-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-3">  
+                            <div class="footer-center-responsive my-auto">
+                                <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                                    <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 footer-responsive-break"></div>
+                        <div class="col-6 col-sm-6 text-center">  
+                            <p>
+                                 © 2015-2023, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.
+                            </p>
+                            <div class="row">
                     
-                    <div class="col text-right">
-                        <small>
-                            <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
-                        </small>
-                    </div>
-                    <div class="col text-center">
-                        <small>
-                            <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
-                        </small>
-                    </div>
-                    <div class="col  text-left ">
-                        <small>
-                            <a href="/resources/changelog.html" class="footer-link" data-toggle="tooltip" data-placement="top" title="ATT&amp;CK content version 9.0&#013;Website version 3.3.1">ATT&CK v9.0</a>
-                        </small>
-                    </div>
-
-                </div>
-            </div>
-            <div class="w-100 p-2 footer-responsive-break"></div>
-                <div class="col">
-                    <div class="footer-float-right-responsive-brand">
-                        <div class="mb-1">
-                            <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
-                                <!-- <i class="fa fa-twitter"></i> -->
-                                <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
-                                <b>@MITREattack</b>
-                            </a>
+                                <div class="col text-right">
+                                    <small>
+                                        <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
+                                    </small>
+                                </div>
+                                <div class="col text-center">
+                                    <small>
+                                        <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
+                                    </small>
+                                </div>
+                                <div class="col  text-left ">
+                                    <small>
+                                        <a href="/resources/changelog.html" class="footer-link" data-toggle="tooltip" data-placement="top" data-html="true" title="ATT&amp;CK content v13.1&#013;Website  v4.0.5">ATT&CK v13.1</a>
+                                    </small>
+                                </div>
+            
+                            </div>
                         </div>
-                        <div class="">
-                            <a href="/contact" class="btn btn-primary w-100">
-                                Contact
-                            </a>
+                        <div class="w-100 p-2 footer-responsive-break"></div>
+                            <div class="col">
+                                <div class="footer-float-right-responsive-brand">
+                                    <div class="mb-1">
+                                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                                            <!-- <i class="fa fa-twitter"></i> -->
+                                            <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
+                                            <b>@MITREattack</b>
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <a href="/contact" class="btn btn-primary w-100">
+                                            Contact
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
     </div>
-</footer>
+
+
+<!--stopindex-->
+
 </div>
     <!--SCRIPTS-->
         <!--SCRIPTS-->
     <script src="/theme/scripts/jquery-3.5.1.min.js"></script>
     <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap-select.min.js"></script>
     <script src="/theme/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/theme/scripts/site.js"></script>
-    <script src="/theme/scripts/flexsearch.es5.js"></script> 
-    <script src="/theme/scripts/localforage.min.js"></script>
-    <script src="/theme/scripts/settings.js?7657"></script>
-    <script src="/theme/scripts/search_babelized.js"></script>
+    <script src="/theme/scripts/site.js?2454"></script>
+    <script src="/theme/scripts/settings.js?5703"></script>
+    <script src="/theme/scripts/search_bundle.js"></script>
+    <script src="/theme/scripts/resizer.js"></script>
 
     <script src="/theme/scripts/matrix.js"></script>
     <script src="/theme/scripts/navigation.js"></script>

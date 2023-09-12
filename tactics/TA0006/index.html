@@ -1,21 +1,11 @@
 
-
 <!DOCTYPE html>
 <html lang='en'>
 
 <head>
-            
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62667723-1"></script>          
-    <script>        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-62667723-1'); 
-    </script>
-    <meta name="google-site-verification" content="2oJKLqNN62z6AOCb0A0IXGtbQuj-lev5YPAHFF_cbHQ"/>
-
+    
         <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta name='viewport' content='width=device-width, initial-scale=1,shrink-to-fit=no'>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel='shortcut icon' href='/theme/favicon.ico' type='image/x-icon'>
         <title>Credential Access, Tactic TA0006 - Enterprise | MITRE ATT&CK&reg;</title>
@@ -23,15 +13,20 @@
         <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
         <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
         <link rel='stylesheet' href='/theme/style/bootstrap-tourist.css' />
-        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?426cc53a">
+        <link rel='stylesheet' href='/theme/style/bootstrap-select.min.css' />
+        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?774bd4a3">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-<!--stopindex-->
-    <header>
+
+    <div class="container-fluid attack-website-wrapper d-flex flex-column h-100">
+        <div class="row sticky-top flex-grow-0 flex-shrink-1">
+            <!-- header elements -->
+            <header class="col px-0">
     
-            <nav class='navbar navbar-expand-lg navbar-dark fixed-top'>
+                    <nav class='navbar navbar-expand-lg navbar-dark position-static'>
         <a class='navbar-brand' href='/'><img src="/theme/images/mitre_attack_logo.png" class="attack-logo"></a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse'
                 aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
@@ -39,8 +34,19 @@
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
             <ul class='nav nav-tabs ml-auto'>
-                        <li class="nav-item">
-                            <a href="/matrices/"  class="nav-link" ><b>Matrices</b></a>
+                        <li class="nav-item dropdown">
+                                
+    <a class="nav-link dropdown-toggle" href="/matrices/" id="navbarDropdown" role="button"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Matrices</b>
+    </a>
+    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/matrices/enterprise/">Enterprise</a>
+                <a class="dropdown-item" href="/matrices/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/matrices/ics/">ICS</a>
+    </div>
+
+
                         </li>
                         <li class="nav-item dropdown">
                                 
@@ -51,6 +57,7 @@
     <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/tactics/enterprise/">Enterprise</a>
                 <a class="dropdown-item" href="/tactics/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/tactics/ics/">ICS</a>
     </div>
 
 
@@ -64,9 +71,13 @@
     <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/techniques/enterprise/">Enterprise</a>
                 <a class="dropdown-item" href="/techniques/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/techniques/ics/">ICS</a>
     </div>
 
 
+                        </li>
+                        <li class="nav-item">
+                            <a href="/datasources"  class="nav-link" ><b>Data Sources</b></a>
                         </li>
                         <li class="nav-item dropdown">
                                 
@@ -77,6 +88,7 @@
     <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/mitigations/enterprise/">Enterprise</a>
                 <a class="dropdown-item" href="/mitigations/mobile/">Mobile</a>
+                <a class="dropdown-item" href="/mitigations/ics/">ICS</a>
     </div>
 
 
@@ -86,6 +98,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="/software/"  class="nav-link" ><b>Software</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/campaigns"  class="nav-link" ><b>Campaigns</b></a>
                         </li>
                         <li class="nav-item dropdown">
                                 
@@ -103,6 +118,7 @@
                 <a class="dropdown-item" href="/resources/updates/">Updates</a>
                 <a class="dropdown-item" href="/resources/versions/">Versions of ATT&CK</a>
                 <a class="dropdown-item" href="/resources/related-projects/">Related Projects</a>
+                <a class="dropdown-item" href="/resources/brand/">Brand Guide</a>
     </div>
 
 
@@ -118,343 +134,407 @@
                             <a href="/resources/contribute/"  class="nav-link" ><b>Contribute</b></a>
                         </li>
                         <li class="nav-item">
-                            <button id="search-button" class="btn search-button">Search <div class="search-icon"></div></button>
+                            <button id="search-button" class="btn search-button">Search <div id="search-icon" class="icon-button search-icon"></div></button>
                         </li>
             </ul>
         </div>
     </nav>
 
-    </header>
-    <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the versioning feature -->
-    <!-- !versions banner! -->
+            </header>
+        </div>
+        <div class="row flex-grow-0 flex-shrink-1">
+            <!-- banner elements -->
+            <div class="col px-0">
+                <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the versioning feature -->
+                <!-- !versions banner! -->
+                    <div class="container-fluid banner-message">
+                        ATT&CKcon 4.0 will be held on Oct 24-25 in McLean, VA. <a href='https://na.eventscloud.com/attackcon4/'>Click here</a> for more details and to register.
+                    </div>
+            </div>
+        </div>
+        <div class="row flex-grow-1 flex-shrink-0">
+            <!-- main content elements -->
+            <!--start-indexing-for-search-->
 
-<div id='content' class="maincontent">
-    <!--start-indexing-for-search-->
-    <div class='container-fluid h-100'>
-        <div class='row h-100'>
  
-             
-            <div class="nav flex-column col-xl-2 col-lg-3 col-md-3  sidebar nav pt-5 pb-3 pl-3 border-right" id="v-tab" role="tablist" aria-orientation="vertical">
+     
+    <div class="sidebar nav sticky-top flex-column pr-0 pt-4 pb-3 pl-3" id="v-tab" role="tablist" aria-orientation="vertical">
+        <div class="resizer"></div>
 <!--stop-indexing-for-search-->
-    <div class="group-nav-desktop-view">
-        <span class="heading" id="v-home-tab" aria-selected="false">TACTICS</span>
-
-
-    
-
+<div id="v-tab" role="tablist" aria-orientation="vertical" class="h-100">
+        <div class="sidenav-wrapper">
+  <div class="heading" data-toggle="collapse" data-target="#sidebar-collapse" id="v-home-tab" aria-selected="false">TACTICS
+    <i class="fa fa-fw fa-chevron-down"></i>
+    <i class="fa fa-fw fa-chevron-up"></i>
+  </div>
+  <br class="br-mobile">
+  <div class="collapse show" id="sidebar-collapse">
+  <div class="sidenav-list">
 <div class="sidenav">
-        <div class="sidenav-head " id="enterprise">
-                <a href="/tactics/enterprise/">
-                    Enterprise
-                </a>
-            <div class="expand-button collapsed" id="enterprise-header" data-toggle="collapse" data-target="#enterprise-body" aria-expanded="false" aria-controls="#enterprise-body"></div>
-
-        </div>
-        <div class="sidenav-body collapse" id="enterprise-body" aria-labelledby="enterprise-header">
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Reconnaissance">
-                <a href="/tactics/TA0043/">
-                    Reconnaissance
-                </a>
-            </div>
+  <div class="sidenav-head  " id="enterprise">
+      <a href="/tactics/enterprise/">
+        Enterprise
+      </a>
+    <div class="expand-button collapsed" id="enterprise-header" data-toggle="collapse" data-target="#enterprise-body" aria-expanded="false" aria-controls="#enterprise-body"></div>
+  </div>
+  <div class="sidenav-body collapse" id="enterprise-body" aria-labelledby="enterprise-header">
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Reconnaissance">
+      <a href="/tactics/TA0043/">
+        Reconnaissance
+      </a>
+    </div>
 </div>
 
-                    
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Resource Development">
+      <a href="/tactics/TA0042/">
+        Resource Development
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Initial Access">
+      <a href="/tactics/TA0001/">
+        Initial Access
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Execution">
+      <a href="/tactics/TA0002/">
+        Execution
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Persistence">
+      <a href="/tactics/TA0003/">
+        Persistence
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Privilege Escalation">
+      <a href="/tactics/TA0004/">
+        Privilege Escalation
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Defense Evasion">
+      <a href="/tactics/TA0005/">
+        Defense Evasion
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  active " id="enterprise-Credential Access">
+      <a href="/tactics/TA0006/">
+        Credential Access
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Discovery">
+      <a href="/tactics/TA0007/">
+        Discovery
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Lateral Movement">
+      <a href="/tactics/TA0008/">
+        Lateral Movement
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Collection">
+      <a href="/tactics/TA0009/">
+        Collection
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Command and Control">
+      <a href="/tactics/TA0011/">
+        Command and Control
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Exfiltration">
+      <a href="/tactics/TA0010/">
+        Exfiltration
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="enterprise-Impact">
+      <a href="/tactics/TA0040/">
+        Impact
+      </a>
+    </div>
+</div>
+
+  </div>
+</div>
 
 <div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Resource Development">
-                <a href="/tactics/TA0042/">
-                    Resource Development
-                </a>
-            </div>
+  <div class="sidenav-head  " id="mobile">
+      <a href="/tactics/mobile/">
+        Mobile
+      </a>
+    <div class="expand-button collapsed" id="mobile-header" data-toggle="collapse" data-target="#mobile-body" aria-expanded="false" aria-controls="#mobile-body"></div>
+  </div>
+  <div class="sidenav-body collapse" id="mobile-body" aria-labelledby="mobile-header">
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Initial Access">
+      <a href="/tactics/TA0027/">
+        Initial Access
+      </a>
+    </div>
 </div>
 
-                    
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Execution">
+      <a href="/tactics/TA0041/">
+        Execution
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Persistence">
+      <a href="/tactics/TA0028/">
+        Persistence
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Privilege Escalation">
+      <a href="/tactics/TA0029/">
+        Privilege Escalation
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Defense Evasion">
+      <a href="/tactics/TA0030/">
+        Defense Evasion
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Credential Access">
+      <a href="/tactics/TA0031/">
+        Credential Access
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Discovery">
+      <a href="/tactics/TA0032/">
+        Discovery
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Lateral Movement">
+      <a href="/tactics/TA0033/">
+        Lateral Movement
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Collection">
+      <a href="/tactics/TA0035/">
+        Collection
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Command and Control">
+      <a href="/tactics/TA0037/">
+        Command and Control
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Exfiltration">
+      <a href="/tactics/TA0036/">
+        Exfiltration
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Impact">
+      <a href="/tactics/TA0034/">
+        Impact
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Network Effects">
+      <a href="/tactics/TA0038/">
+        Network Effects
+      </a>
+    </div>
+</div>
+
+        <div class="sidenav">
+    <div class="sidenav-head  " id="mobile-Remote Service Effects">
+      <a href="/tactics/TA0039/">
+        Remote Service Effects
+      </a>
+    </div>
+</div>
+
+  </div>
+</div>
 
 <div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Initial Access">
-                <a href="/tactics/TA0001/">
-                    Initial Access
-                </a>
-            </div>
+  <div class="sidenav-head  " id="ics">
+      <a href="/tactics/ics/">
+        ICS
+      </a>
+    <div class="expand-button collapsed" id="ics-header" data-toggle="collapse" data-target="#ics-body" aria-expanded="false" aria-controls="#ics-body"></div>
+  </div>
+  <div class="sidenav-body collapse" id="ics-body" aria-labelledby="ics-header">
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Initial Access">
+      <a href="/tactics/TA0108/">
+        Initial Access
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Execution">
-                <a href="/tactics/TA0002/">
-                    Execution
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Execution">
+      <a href="/tactics/TA0104/">
+        Execution
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Persistence">
-                <a href="/tactics/TA0003/">
-                    Persistence
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Persistence">
+      <a href="/tactics/TA0110/">
+        Persistence
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Privilege Escalation">
-                <a href="/tactics/TA0004/">
-                    Privilege Escalation
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Privilege Escalation">
+      <a href="/tactics/TA0111/">
+        Privilege Escalation
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Defense Evasion">
-                <a href="/tactics/TA0005/">
-                    Defense Evasion
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Evasion">
+      <a href="/tactics/TA0103/">
+        Evasion
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head active" id="enterprise-Credential Access">
-                <a href="/tactics/TA0006/">
-                    Credential Access
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Discovery">
+      <a href="/tactics/TA0102/">
+        Discovery
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Discovery">
-                <a href="/tactics/TA0007/">
-                    Discovery
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Lateral Movement">
+      <a href="/tactics/TA0109/">
+        Lateral Movement
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Lateral Movement">
-                <a href="/tactics/TA0008/">
-                    Lateral Movement
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Collection">
+      <a href="/tactics/TA0100/">
+        Collection
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Collection">
-                <a href="/tactics/TA0009/">
-                    Collection
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Command and Control">
+      <a href="/tactics/TA0101/">
+        Command and Control
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Command and Control">
-                <a href="/tactics/TA0011/">
-                    Command and Control
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Inhibit Response Function">
+      <a href="/tactics/TA0107/">
+        Inhibit Response Function
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Exfiltration">
-                <a href="/tactics/TA0010/">
-                    Exfiltration
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Impair Process Control">
+      <a href="/tactics/TA0106/">
+        Impair Process Control
+      </a>
+    </div>
 </div>
 
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="enterprise-Impact">
-                <a href="/tactics/TA0040/">
-                    Impact
-                </a>
-            </div>
+        <div class="sidenav">
+    <div class="sidenav-head  " id="ics-Impact">
+      <a href="/tactics/TA0105/">
+        Impact
+      </a>
+    </div>
 </div>
 
-        </div>
+  </div>
 </div>
 
-    
-
-<div class="sidenav">
-        <div class="sidenav-head " id="mobile">
-                <a href="/tactics/mobile/">
-                    Mobile
-                </a>
-            <div class="expand-button collapsed" id="mobile-header" data-toggle="collapse" data-target="#mobile-body" aria-expanded="false" aria-controls="#mobile-body"></div>
-
-        </div>
-        <div class="sidenav-body collapse" id="mobile-body" aria-labelledby="mobile-header">
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Initial Access">
-                <a href="/tactics/TA0027/">
-                    Initial Access
-                </a>
-            </div>
+  </div>
 </div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Execution">
-                <a href="/tactics/TA0041/">
-                    Execution
-                </a>
-            </div>
 </div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Persistence">
-                <a href="/tactics/TA0028/">
-                    Persistence
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Privilege Escalation">
-                <a href="/tactics/TA0029/">
-                    Privilege Escalation
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Defense Evasion">
-                <a href="/tactics/TA0030/">
-                    Defense Evasion
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Credential Access">
-                <a href="/tactics/TA0031/">
-                    Credential Access
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Discovery">
-                <a href="/tactics/TA0032/">
-                    Discovery
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Lateral Movement">
-                <a href="/tactics/TA0033/">
-                    Lateral Movement
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Collection">
-                <a href="/tactics/TA0035/">
-                    Collection
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Command and Control">
-                <a href="/tactics/TA0037/">
-                    Command and Control
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Exfiltration">
-                <a href="/tactics/TA0036/">
-                    Exfiltration
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Impact">
-                <a href="/tactics/TA0034/">
-                    Impact
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Network Effects">
-                <a href="/tactics/TA0038/">
-                    Network Effects
-                </a>
-            </div>
-</div>
-
-                    
-
-<div class="sidenav">
-            <div class="sidenav-head" id="mobile-Remote Service Effects">
-                <a href="/tactics/TA0039/">
-                    Remote Service Effects
-                </a>
-            </div>
-</div>
-
-        </div>
-</div>
-
 
     </div>
 <!--start-indexing-for-search-->
-            </div>
-             
-            <div class="tab-content col-xl-10 col-lg-9 col-md-9 pt-4" id="v-tabContent">
-                <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
+    </div>
+
+    
+     
+    <div class="tab-content col-xl-9 col-lg-9 col-md-8 pt-4" id="v-tabContent">
+        <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
     
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -492,19 +572,19 @@
         <a data-toggle="tooltip" 
            data-placement="bottom" 
            title="Permalink to this version of TA0006" 
-           href="/versions/v9/tactics/TA0006/" data-test-ignore="true">Version Permalink</a>
+           href="/versions/v13/tactics/TA0006/" data-test-ignore="true">Version Permalink</a>
     </div>
     <div class="permalink">
         <a data-toggle="tooltip" 
            data-placement="bottom" 
            title="Go to the live version of TA0006" 
-           href="/versions/v9/tactics/TA0006/" data-test-ignore="true">Live Version</a><!--do not change this line without also changing versions.py-->
+           href="/versions/v13/tactics/TA0006/" data-test-ignore="true">Live Version</a><!--do not change this line without also changing versions.py-->
     </div>
 </div>
 
                             </div>
                         </div>
-                        <h2 class="pt-3" id ="techniques">Techniques</h2><h6 class="table-object-count">Techniques: 15</h6>
+                        <h2 class="pt-3" id ="techniques">Techniques</h2><h6 class="table-object-count">Techniques: 17</h6>
                         <table class="table-techniques">
         <thead>
             <tr>
@@ -514,6 +594,57 @@
             </tr>
         </thead>
         <tbody>
+                <tr class="technique">
+                    <td colspan="2">
+                        <a href="/techniques/T1557"> T1557 </a>
+                    </td>
+                    <td>
+                        <a href="/techniques/T1557"> Adversary-in-the-Middle </a>
+                    </td>
+                    <td>
+                                Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as <a href="/techniques/T1040">Network Sniffing</a> or <a href="/techniques/T1565/002">Transmitted Data Manipulation</a>. By abusing features of common networking protocols that can determine the flow of network traffic (e.g. ARP, DNS, LLMNR, etc.), adversaries may force a device to communicate through an adversary controlled system so they can collect information or perform additional actions.
+
+                    </td>
+                </tr>
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1557/001"> .001 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1557/001"> LLMNR/NBT-NS Poisoning and SMB Relay </a>
+                        </td>
+                        <td>
+                                    By responding to LLMNR/NBT-NS network traffic, adversaries may spoof an authoritative source for name resolution to force communication with an adversary controlled system. This activity may be used to collect or relay authentication materials. 
+
+                        </td>
+                    </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1557/002"> .002 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1557/002"> ARP Cache Poisoning </a>
+                        </td>
+                        <td>
+                                    Adversaries may poison Address Resolution Protocol (ARP) caches to position themselves between the communication of two or more networked devices. This activity may be used to enable follow-on behaviors such as <a href="/techniques/T1040">Network Sniffing</a> or <a href="/techniques/T1565/002">Transmitted Data Manipulation</a>.
+
+                        </td>
+                    </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1557/003"> .003 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1557/003"> DHCP Spoofing </a>
+                        </td>
+                        <td>
+                                    Adversaries may redirect network traffic to adversary-owned systems by spoofing Dynamic Host Configuration Protocol (DHCP) traffic and acting as a malicious DHCP server on the victim network. By achieving the adversary-in-the-middle (AiTM) position, adversaries may collect network communications, including passed credentials, especially those sent over insecure, unencrypted protocols. This may also enable follow-on behaviors such as <a href="/techniques/T1040">Network Sniffing</a> or <a href="/techniques/T1565/002">Transmitted Data Manipulation</a>.
+
+                        </td>
+                    </tr>   
                 <tr class="technique">
                     <td colspan="2">
                         <a href="/techniques/T1110"> T1110 </a>
@@ -548,7 +679,7 @@
                             <a href="/techniques/T1110/002"> Password Cracking </a>
                         </td>
                         <td>
-                                    Adversaries may use password cracking to attempt to recover usable credentials, such as plaintext passwords, when credential material such as password hashes are obtained. <a href="/techniques/T1003">OS Credential Dumping</a> is used to obtain password hashes, this may only get an adversary so far when <a href="/techniques/T1550/002">Pass the Hash</a> is not an option. Techniques to systematically guess the passwords used to compute hashes are available, or the adversary may use a pre-computed rainbow table to crack hashes. Cracking hashes is usually done on adversary-controlled systems outside of the target network. The resulting plaintext password resulting from a successfully cracked hash may be used to log into systems, resources, and services in which the account has access.
+                                    Adversaries may use password cracking to attempt to recover usable credentials, such as plaintext passwords, when credential material such as password hashes are obtained. <a href="/techniques/T1003">OS Credential Dumping</a> can be used to obtain password hashes, this may only get an adversary so far when <a href="/techniques/T1550/002">Pass the Hash</a> is not an option. Further,  adversaries may leverage <a href="/techniques/T1602">Data from Configuration Repository</a> in order to obtain hashed credentials for network devices. 
 
                         </td>
                     </tr>   
@@ -599,7 +730,7 @@
                             <a href="/techniques/T1555/001"> Keychain </a>
                         </td>
                         <td>
-                                    Adversaries may collect the keychain storage data from a system to acquire credentials. Keychains are the built-in way for macOS to keep track of users' passwords and credentials for many services and features such as WiFi passwords, websites, secure notes, certificates, and Kerberos. Keychain files are located in <code>~/Library/Keychains/</code>,<code>/Library/Keychains/</code>, and <code>/Network/Library/Keychains/</code>.  The <code>security</code> command-line utility, which is built into macOS by default, provides a useful way to manage these credentials.
+                                    Adversaries may acquire credentials from Keychain. Keychain (or Keychain Services) is the macOS credential management system that stores account names, passwords, private keys, certificates, sensitive application data, payment data, and secure notes. There are three types of Keychains: Login Keychain, System Keychain, and Local Items (iCloud) Keychain. The default Keychain is the Login Keychain, which stores user passwords and information. The System Keychain stores items accessed by the operating system, such as items shared among users on a host. The Local Items (iCloud) Keychain is used for items synced with Apple’s iCloud service. 
 
                         </td>
                     </tr>   
@@ -612,7 +743,7 @@
                             <a href="/techniques/T1555/002"> Securityd Memory </a>
                         </td>
                         <td>
-                                    An adversary may obtain root access (allowing them to read securityd’s memory), then they can scan through memory to find the correct sequence of keys in relatively few tries to decrypt the user’s logon keychain. This provides the adversary with all the plaintext passwords for users, WiFi, mail, browsers, certificates, secure notes, etc. 
+                                    An adversary may obtain root access (allowing them to read securityd’s memory), then they can scan through memory to find the correct sequence of keys in relatively few tries to decrypt the user’s logon keychain. This provides the adversary with all the plaintext passwords for users, WiFi, mail, browsers, certificates, secure notes, etc.
 
                         </td>
                     </tr>   
@@ -783,44 +914,6 @@
                     </tr>   
                 <tr class="technique">
                     <td colspan="2">
-                        <a href="/techniques/T1557"> T1557 </a>
-                    </td>
-                    <td>
-                        <a href="/techniques/T1557"> Man-in-the-Middle </a>
-                    </td>
-                    <td>
-                                Adversaries may attempt to position themselves between two or more networked devices using a man-in-the-middle (MiTM) technique to support follow-on behaviors such as <a href="/techniques/T1040">Network Sniffing</a> or <a href="/techniques/T1565/002">Transmitted Data Manipulation</a>. By abusing features of common networking protocols that can determine the flow of network traffic (e.g. ARP, DNS, LLMNR, etc.), adversaries may force a device to communicate through an adversary controlled system so they can collect information or perform additional actions.
-
-                    </td>
-                </tr>
-                    <tr class="sub technique">
-                        <td></td>
-                        <td>
-                            <a href="/techniques/T1557/001"> .001 </a>
-                        </td>
-                        <td>
-                            <a href="/techniques/T1557/001"> LLMNR/NBT-NS Poisoning and SMB Relay </a>
-                        </td>
-                        <td>
-                                    By responding to LLMNR/NBT-NS network traffic, adversaries may spoof an authoritative source for name resolution to force communication with an adversary controlled system. This activity may be used to collect or relay authentication materials. 
-
-                        </td>
-                    </tr>   
-                    <tr class="sub technique">
-                        <td></td>
-                        <td>
-                            <a href="/techniques/T1557/002"> .002 </a>
-                        </td>
-                        <td>
-                            <a href="/techniques/T1557/002"> ARP Cache Poisoning </a>
-                        </td>
-                        <td>
-                                    Adversaries may poison Address Resolution Protocol (ARP) caches to position themselves between the communication of two or more networked devices. This activity may be used to enable follow-on behaviors such as <a href="/techniques/T1040">Network Sniffing</a> or <a href="/techniques/T1565/002">Transmitted Data Manipulation</a>.
-
-                        </td>
-                    </tr>   
-                <tr class="technique">
-                    <td colspan="2">
                         <a href="/techniques/T1556"> T1556 </a>
                     </td>
                     <td>
@@ -883,6 +976,82 @@
 
                         </td>
                     </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1556/005"> .005 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1556/005"> Reversible Encryption </a>
+                        </td>
+                        <td>
+                                    An adversary may abuse Active Directory authentication encryption properties to gain access to credentials on Windows systems. The <code>AllowReversiblePasswordEncryption</code> property specifies whether reversible password encryption for an account is enabled or disabled. By default this property is disabled (instead storing user credentials as the output of one-way hashing functions) and should not be enabled unless legacy or other software require it.
+
+                        </td>
+                    </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1556/006"> .006 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1556/006"> Multi-Factor Authentication </a>
+                        </td>
+                        <td>
+                                    Adversaries may disable or modify multi-factor authentication (MFA) mechanisms to enable persistent access to compromised accounts.
+
+                        </td>
+                    </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1556/007"> .007 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1556/007"> Hybrid Identity </a>
+                        </td>
+                        <td>
+                                    Adversaries may patch, modify, or otherwise backdoor cloud authentication processes that are tied to on-premises user identities in order to bypass typical authentication mechanisms, access credentials, and enable persistent access to accounts.  
+
+                        </td>
+                    </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1556/008"> .008 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1556/008"> Network Provider DLL </a>
+                        </td>
+                        <td>
+                                    Adversaries may register malicious network provider dynamic link libraries (DLLs) to capture cleartext user credentials during the authentication process. Network provider DLLs allow Windows to interface with specific network protocols and can also support add-on credential management functions. During the logon process, Winlogon (the interactive logon module) sends credentials to the local <code>mpnotify.exe</code> process via RPC. The <code>mpnotify.exe</code> process then shares the credentials in cleartext with registered credential managers when notifying that a logon event is happening. 
+
+                        </td>
+                    </tr>   
+                <tr class="technique">
+                    <td colspan="2">
+                        <a href="/techniques/T1111"> T1111 </a>
+                    </td>
+                    <td>
+                        <a href="/techniques/T1111"> Multi-Factor Authentication Interception </a>
+                    </td>
+                    <td>
+                                Adversaries may target multi-factor authentication (MFA) mechanisms, (i.e., smart cards, token generators, etc.) to gain access to credentials that can be used to access systems, services, and network resources. Use of MFA is recommended and provides a higher level of security than usernames and passwords alone, but organizations should be aware of techniques that could be used to intercept and bypass these security mechanisms. 
+
+                    </td>
+                </tr>
+                <tr class="technique">
+                    <td colspan="2">
+                        <a href="/techniques/T1621"> T1621 </a>
+                    </td>
+                    <td>
+                        <a href="/techniques/T1621"> Multi-Factor Authentication Request Generation </a>
+                    </td>
+                    <td>
+                                Adversaries may attempt to bypass multi-factor authentication (MFA) mechanisms and gain access to accounts by generating MFA requests sent to users.
+
+                    </td>
+                </tr>
                 <tr class="technique">
                     <td colspan="2">
                         <a href="/techniques/T1040"> T1040 </a>
@@ -994,7 +1163,7 @@
                             <a href="/techniques/T1003/007"> Proc Filesystem </a>
                         </td>
                         <td>
-                                    Adversaries may gather credentials from information stored in the Proc filesystem or <code>/proc</code>. The Proc filesystem on Linux contains a great deal of information regarding the state of the running operating system. Processes running with root privileges can use this facility to scrape live memory of other running programs. If any of these programs store passwords in clear text or password hashes in memory, these values can then be harvested for either usage or brute force attacks, respectively.
+                                    Adversaries may gather credentials from the proc filesystem or <code>/proc</code>. The proc filesystem is a pseudo-filesystem used as an interface to kernel data structures for Linux based systems managing virtual memory. For each process, the <code>/proc/&lt;PID&gt;/maps</code> file shows how memory is mapped within the process’s virtual address space. And <code>/proc/&lt;PID&gt;/mem</code>, exposed for debugging purposes, provides access to the process’s virtual address space.
 
                         </td>
                     </tr>   
@@ -1019,7 +1188,19 @@
                         <a href="/techniques/T1528"> Steal Application Access Token </a>
                     </td>
                     <td>
-                                Adversaries can steal user application access tokens as a means of acquiring credentials to access remote systems and resources. This can occur through social engineering and typically requires user action to grant access.
+                                Adversaries can steal application access tokens as a means of acquiring credentials to access remote systems and resources.
+
+                    </td>
+                </tr>
+                <tr class="technique">
+                    <td colspan="2">
+                        <a href="/techniques/T1649"> T1649 </a>
+                    </td>
+                    <td>
+                        <a href="/techniques/T1649"> Steal or Forge Authentication Certificates </a>
+                    </td>
+                    <td>
+                                Adversaries may steal or forge certificates used for authentication to access remote systems or resources. Digital certificates are often used to sign and encrypt messages and/or files. Certificates are also used as authentication material. For example, Azure AD device certificates and Active Directory Certificate Services (AD CS) certificates bind to an identity and can be used as credentials for domain accounts.
 
                     </td>
                 </tr>
@@ -1031,7 +1212,7 @@
                         <a href="/techniques/T1558"> Steal or Forge Kerberos Tickets </a>
                     </td>
                     <td>
-                                Adversaries may attempt to subvert Kerberos authentication by stealing or forging Kerberos tickets to enable <a href="/techniques/T1550/003">Pass the Ticket</a>. 
+                                Adversaries may attempt to subvert Kerberos authentication by stealing or forging Kerberos tickets to enable <a href="/techniques/T1550/003">Pass the Ticket</a>. Kerberos is an authentication protocol widely used in modern Windows domain environments. In Kerberos environments, referred to as "realms", there are three basic participants: client, service, and Key Distribution Center (KDC). Clients request access to a service and through the exchange of Kerberos tickets, originating from KDC, they are granted access after having successfully authenticated. The KDC is responsible for both authentication and ticket granting.  Adversaries may attempt to abuse Kerberos by stealing tickets or forging tickets to enable unauthorized access.
 
                     </td>
                 </tr>
@@ -1101,18 +1282,6 @@
                 </tr>
                 <tr class="technique">
                     <td colspan="2">
-                        <a href="/techniques/T1111"> T1111 </a>
-                    </td>
-                    <td>
-                        <a href="/techniques/T1111"> Two-Factor Authentication Interception </a>
-                    </td>
-                    <td>
-                                Adversaries may target two-factor authentication mechanisms, such as smart cards, to gain access to credentials that can be used to access systems, services, and network resources. Use of two or multi-factor authentication (2FA or MFA) is recommended and provides a higher level of security than user names and passwords alone, but organizations should be aware of techniques that could be used to intercept and bypass these security mechanisms. 
-
-                    </td>
-                </tr>
-                <tr class="technique">
-                    <td colspan="2">
                         <a href="/techniques/T1552"> T1552 </a>
                     </td>
                     <td>
@@ -1158,7 +1327,7 @@
                             <a href="/techniques/T1552/003"> Bash History </a>
                         </td>
                         <td>
-                                    Adversaries may search the bash command history on compromised systems for insecurely stored credentials. Bash keeps track of the commands users type on the command-line with the "history" utility. Once a user logs out, the history is flushed to the user’s <code>.bash_history</code> file. For each user, this file resides at the same location: <code>~/.bash_history</code>. Typically, this file keeps track of the user’s last 500 commands. Users often type usernames and passwords on the command-line as parameters to programs, which then get saved to this file when they log out. Attackers can abuse this by looking through the file for potential credentials. 
+                                    Adversaries may search the bash command history on compromised systems for insecurely stored credentials. Bash keeps track of the commands users type on the command-line with the "history" utility. Once a user logs out, the history is flushed to the user’s <code>.bash_history</code> file. For each user, this file resides at the same location: <code>~/.bash_history</code>. Typically, this file keeps track of the user’s last 500 commands. Users often type usernames and passwords on the command-line as parameters to programs, which then get saved to this file when they log out. Adversaries can abuse this by looking through the file for potential credentials. 
 
                         </td>
                     </tr>   
@@ -1214,6 +1383,19 @@
 
                         </td>
                     </tr>   
+                    <tr class="sub technique">
+                        <td></td>
+                        <td>
+                            <a href="/techniques/T1552/008"> .008 </a>
+                        </td>
+                        <td>
+                            <a href="/techniques/T1552/008"> Chat Messages </a>
+                        </td>
+                        <td>
+                                    Adversaries may directly collect unsecured credentials stored or passed through user communication services. Credentials may be sent and stored in user chat communication applications such as email, chat services like Slack or Teams, collaboration tools like Jira or Trello, and any other services that support user communication. Users may share various forms of credentials (such as usernames and passwords, API keys, or authentication tokens) on private or public corporate internal communications channels.
+
+                        </td>
+                    </tr>   
         </tbody>
     </table>
 
@@ -1222,12 +1404,12 @@
         </div>
     </div>
     
-                </div>
-            </div>
-        </div>  
+        </div>
     </div>
-    <!--stop-indexing-for-search-->
-    <div class="overlay search" id="search-overlay" style="display: none;">
+
+            <!--stop-indexing-for-search-->
+            <!-- search overlay for entire page -- not displayed inline -->
+            <div class="overlay search" id="search-overlay" style="display: none;">
     <div class="overlay-inner">
         <!-- text input for searching -->
         <div class="search-header">
@@ -1251,73 +1433,81 @@
     </div>
 </div>
 
-</div>
-<footer class="footer p-3">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 col-sm-4 col-md-3">  
-                <div class="footer-center-responsive my-auto">
-                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
-                        <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 col-sm-2 footer-responsive-break"></div>
-            <div class="col-6 col-sm-6 text-center">  
-                <p>
-                     © 2015-2021, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.
-                </p>
-                <div class="row">
+        </div>
+        <div class="row flex-grow-0 flex-shrink-1">
+            <!-- footer elements -->
+            <footer class="col footer p-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-3">  
+                            <div class="footer-center-responsive my-auto">
+                                <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                                    <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 footer-responsive-break"></div>
+                        <div class="col-6 col-sm-6 text-center">  
+                            <p>
+                                 © 2015-2023, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.
+                            </p>
+                            <div class="row">
                     
-                    <div class="col text-right">
-                        <small>
-                            <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
-                        </small>
-                    </div>
-                    <div class="col text-center">
-                        <small>
-                            <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
-                        </small>
-                    </div>
-                    <div class="col  text-left ">
-                        <small>
-                            <a href="/resources/changelog.html" class="footer-link" data-toggle="tooltip" data-placement="top" title="ATT&amp;CK content version 9.0&#013;Website version 3.3.1">ATT&CK v9.0</a>
-                        </small>
-                    </div>
-
-                </div>
-            </div>
-            <div class="w-100 p-2 footer-responsive-break"></div>
-                <div class="col">
-                    <div class="footer-float-right-responsive-brand">
-                        <div class="mb-1">
-                            <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
-                                <!-- <i class="fa fa-twitter"></i> -->
-                                <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
-                                <b>@MITREattack</b>
-                            </a>
+                                <div class="col text-right">
+                                    <small>
+                                        <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
+                                    </small>
+                                </div>
+                                <div class="col text-center">
+                                    <small>
+                                        <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
+                                    </small>
+                                </div>
+                                <div class="col  text-left ">
+                                    <small>
+                                        <a href="/resources/changelog.html" class="footer-link" data-toggle="tooltip" data-placement="top" data-html="true" title="ATT&amp;CK content v13.1&#013;Website  v4.0.5">ATT&CK v13.1</a>
+                                    </small>
+                                </div>
+            
+                            </div>
                         </div>
-                        <div class="">
-                            <a href="/contact" class="btn btn-primary w-100">
-                                Contact
-                            </a>
+                        <div class="w-100 p-2 footer-responsive-break"></div>
+                            <div class="col">
+                                <div class="footer-float-right-responsive-brand">
+                                    <div class="mb-1">
+                                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                                            <!-- <i class="fa fa-twitter"></i> -->
+                                            <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
+                                            <b>@MITREattack</b>
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <a href="/contact" class="btn btn-primary w-100">
+                                            Contact
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
     </div>
-</footer>
+
+
+<!--stopindex-->
+
 </div>
         <!--SCRIPTS-->
     <script src="/theme/scripts/jquery-3.5.1.min.js"></script>
     <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap-select.min.js"></script>
     <script src="/theme/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/theme/scripts/site.js"></script>
-    <script src="/theme/scripts/flexsearch.es5.js"></script> 
-    <script src="/theme/scripts/localforage.min.js"></script>
-    <script src="/theme/scripts/settings.js?6826"></script>
-    <script src="/theme/scripts/search_babelized.js"></script>
+    <script src="/theme/scripts/site.js?6993"></script>
+    <script src="/theme/scripts/settings.js?451"></script>
+    <script src="/theme/scripts/search_bundle.js"></script>
+    <script src="/theme/scripts/resizer.js"></script>
 
     <!--SCRIPTS-->
     <script src="/theme/scripts/navigation.js"></script>
